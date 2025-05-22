@@ -1,0 +1,30 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_ADXL345_U.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified();
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+  Serial.begin(9600);
+  if (!accel.begin()) {
+    Serial.println("No valid sensor found");
+    while (1);
+  }
+}
+
+void loop() {
+  sensors_event_t event;
+  accel.getEvent(&event);
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("X:"); lcd.print(event.acceleration.x);
+  lcd.setCursor(8, 0);
+  lcd.print("Y:"); lcd.print(event.acceleration.y);
+  lcd.setCursor(4, 1);
+  lcd.print("Z:"); lcd.print(event.acceleration.z);
+  delay(500);
+}
