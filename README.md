@@ -82,9 +82,6 @@ Upload the respective codes to each Arduino:
 
 ---
 
-## 🏁 Result
-
-Final working prototype of the project is shown below:
 
 ## 🏁 Result
 
