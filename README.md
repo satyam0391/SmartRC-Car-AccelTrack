@@ -3,7 +3,7 @@
 Hi, I am Satyam. This project is very special for me because it is the **first project I built in my college (First Semester Project)**.  
 **Under the guidance of:**  
 Dr. Rashmi Ranjan  
-Assistant Professor, ECE Dept. (IIITN)  
+Assistant Professor, ECE Dept. (IIITN)   
 
 Now I will be briefing the project objective, components used, how the project is made, and the circuit diagrams.
 
